@@ -1,0 +1,16 @@
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\bin\Debug\TaxiParking.exe.config
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\bin\Debug\TaxiParking.exe
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\bin\Debug\TaxiParking.pdb
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.Properties.Resources.resources
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.exe
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.pdb
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.Form1.resources
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\bin\Debug\TaxiParkingLibrary.dll
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\bin\Debug\TaxiParkingLibrary.pdb
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.csproj.CopyComplete
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.ModalDialogForm.resources
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.SortModalDialogForm.resources
+\\Mac\Home\Desktop\TaxiParking\TaxiParking\obj\Debug\TaxiParking.FilterModalDialogForm.resources

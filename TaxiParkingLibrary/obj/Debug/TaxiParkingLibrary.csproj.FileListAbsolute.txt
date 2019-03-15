@@ -1,0 +1,6 @@
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\bin\Debug\TaxiParkingLibrary.dll
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\bin\Debug\TaxiParkingLibrary.pdb
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\obj\Debug\TaxiParkingLibrary.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\obj\Debug\TaxiParkingLibrary.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\obj\Debug\TaxiParkingLibrary.dll
+\\Mac\Home\Desktop\TaxiParking\TaxiParkingLibrary\obj\Debug\TaxiParkingLibrary.pdb
