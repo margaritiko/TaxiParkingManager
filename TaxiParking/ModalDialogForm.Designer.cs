@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModalDialogForm));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.globalIDTextBox = new System.Windows.Forms.TextBox();
             this.global_idLabel = new System.Windows.Forms.Label();
             this.modeTextBox = new System.Windows.Forms.TextBox();
@@ -51,50 +51,50 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.globalIDTextBox, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.global_idLabel, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.modeTextBox, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.modeLabel, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.carCapacityTextBox, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.carCapacityLabel, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.latitudeTextBox, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.latitudeLabel, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.longitudeTextBox, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.longitudeLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.locationDescriptionTextBox, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.locationDescriptionLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.addressTextBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.addressLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.districtTextBox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.districtLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.admAreaLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.admAreaTextBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nameLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.nameTextBox, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 24);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 444);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.tableLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tableLayoutPanel.ColumnCount = 2;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel.Controls.Add(this.globalIDTextBox, 1, 9);
+            this.tableLayoutPanel.Controls.Add(this.global_idLabel, 0, 9);
+            this.tableLayoutPanel.Controls.Add(this.modeTextBox, 1, 8);
+            this.tableLayoutPanel.Controls.Add(this.modeLabel, 0, 8);
+            this.tableLayoutPanel.Controls.Add(this.carCapacityTextBox, 1, 7);
+            this.tableLayoutPanel.Controls.Add(this.carCapacityLabel, 0, 7);
+            this.tableLayoutPanel.Controls.Add(this.latitudeTextBox, 1, 6);
+            this.tableLayoutPanel.Controls.Add(this.latitudeLabel, 0, 6);
+            this.tableLayoutPanel.Controls.Add(this.longitudeTextBox, 1, 5);
+            this.tableLayoutPanel.Controls.Add(this.longitudeLabel, 0, 5);
+            this.tableLayoutPanel.Controls.Add(this.locationDescriptionTextBox, 1, 4);
+            this.tableLayoutPanel.Controls.Add(this.locationDescriptionLabel, 0, 4);
+            this.tableLayoutPanel.Controls.Add(this.addressTextBox, 1, 3);
+            this.tableLayoutPanel.Controls.Add(this.addressLabel, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.districtTextBox, 1, 2);
+            this.tableLayoutPanel.Controls.Add(this.districtLabel, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.admAreaLabel, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.admAreaTextBox, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.nameLabel, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.nameTextBox, 1, 0);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(21, 24);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 10;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(735, 444);
+            this.tableLayoutPanel.TabIndex = 5;
             // 
             // globalIDTextBox
             // 
@@ -324,9 +324,9 @@
             this.okButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.okButton.Location = new System.Drawing.Point(222, 491);
+            this.okButton.Location = new System.Drawing.Point(262, 483);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(340, 131);
+            this.okButton.Size = new System.Drawing.Size(251, 183);
             this.okButton.TabIndex = 6;
             this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -336,23 +336,23 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(774, 629);
+            this.ClientSize = new System.Drawing.Size(774, 679);
             this.Controls.Add(this.okButton);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(800, 700);
-            this.MinimumSize = new System.Drawing.Size(800, 700);
+            this.MaximumSize = new System.Drawing.Size(800, 750);
+            this.MinimumSize = new System.Drawing.Size(800, 750);
             this.Name = "ModalDialogForm";
-            this.Text = "ModalDialogForm";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Text = "Создание / редактирование записи";
+            this.tableLayoutPanel.ResumeLayout(false);
+            this.tableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.TextBox globalIDTextBox;
         private System.Windows.Forms.Label global_idLabel;
         private System.Windows.Forms.TextBox modeTextBox;

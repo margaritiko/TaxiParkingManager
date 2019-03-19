@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace TaxiParkingLibrary
 {
-    delegate void convertGivenDataDelegate(List<string> data);
+
     public class Parking
     {
+        private Location _parkingLocation;
+        private int _rownum;
+        private string _name;
+        private string _address;
+        private string _locationDescription;
+        private int _carCapacity;
+        private string _mode;
+        private int _global_id;
+
+        delegate void convertGivenDataDelegate(List<string> data);
         /// <summary>
         /// Определяет, является ли текущая запись видимой в таблице
         /// </summary>
@@ -20,14 +30,14 @@ namespace TaxiParkingLibrary
         public int Order { get; private set; }
 
         // All fields from CSV table
-        public Location ParkingLocation { get; private set; }
-        public int ROWNUM { get; set; }
-        public string Name { get; private set; }
-        public string Address { get; private set; }
-        public string LocationDescription { get; private set; }
-        public int CarCapacity { get; private set; }
-        public string Mode { get; private set; }
-        public int Global_id { get; private set; }
+        public Location ParkingLocation { get => _parkingLocation; private set => _parkingLocation = value; }
+        public int ROWNUM { get => _rownum; set => _rownum = value; }
+        public string Name { get => _name; private set => _name = value; }
+        public string Address { get => _address; private set => _address = value; }
+        public string LocationDescription { get => _locationDescription; private set => _locationDescription = value; }
+        public int CarCapacity { get => _carCapacity; private set => _carCapacity = value; }
+        public string Mode { get => _mode; private set => _mode = value; }
+        public int Global_id { get => _global_id; private set => _global_id = value; }
 
         /// <summary>
         /// Преобразовать считанную строку в массив строк
@@ -50,7 +60,8 @@ namespace TaxiParkingLibrary
             collect = "";
             for (int i = startIndex; i < stringWithData.Length; ++i)
             {
-                if (stringWithData[i] == '"') {
+                if (stringWithData[i] == '"')
+                {
                     if (isNewField)
                     {
                         result.Add(collect);
@@ -98,13 +109,13 @@ namespace TaxiParkingLibrary
 
         public Parking(string stringWithDataFromCSVFile)
         {
-            
+
             List<string> data = ParseStringIntoArrayWithData(stringWithDataFromCSVFile);
             for (int i = 0; i < data.Count; ++i)
             {
                 data[i] = RemoveWhitespaces(data[i]);
             }
-            
+
             convertGivenDataDelegate convert = ReadROWNUM;
             convert += ReadName;
             convert += ReadLocation;
@@ -126,7 +137,7 @@ namespace TaxiParkingLibrary
         }
 
         /// <summary>
-        /// Преобразовывает global_id значение, считанное из таблицы 
+        /// Преобразовывает ROWNUM значение, считанное из таблицы 
         /// </summary>
         /// <param name="data">Массив с данными</param>
         private void ReadROWNUM(List<string> data)
@@ -214,9 +225,6 @@ namespace TaxiParkingLibrary
             const int index = 8;
             try
             {
-                foreach (var elem in data)
-                    Console.Write(elem);
-                Console.WriteLine();
                 CarCapacity = int.Parse(data[index]);
                 if (CarCapacity <= 0)
                     throw new TaxiParkingException();
@@ -305,11 +313,12 @@ namespace TaxiParkingLibrary
 
 
         /// <summary>
-        /// Возвращает суммарное количество мест на парковках такси района, которому принадлежит данная парковка.
+        /// Возвращает суммарное количество мест на парковках такси района, 
+        /// которому принадлежит данная парковка.
         /// </summary>
         /// <param name="parkings">Набор объектов типа парковка.</param>
-        /// <returns>Количество свободных мест во всех районе.</returns>
-        public int TotalNumberOfParkingSpacesInDistrict(List<Parking> parkings)
+        /// <returns>Количество мест во всех районе.</returns>
+        public int TotalNumberOfParkingSpacesInDistricts(List<Parking> parkings)
         {
             int totalNumberOfParkingSpaces = 0;
             foreach (var parking in parkings)
@@ -318,7 +327,23 @@ namespace TaxiParkingLibrary
 
             return totalNumberOfParkingSpaces;
         }
+
+        /// <summary>
+        /// Возвращает суммарное количество мест на парковках такси округа, 
+        /// которому принадлежит данная парковка.
+        /// </summary>
+        /// <param name="parkings">Набор объектов типа парковка.</param>
+        /// <returns>Количество мест во всех округах.</returns>
+        public int TotalNumberOfParkingSpacesInAdmArea(List<Parking> parkings)
+        {
+            int totalNumberOfParkingSpaces = 0;
+            foreach (var parking in parkings)
+                if (parking.ParkingLocation.AdmArea == this.ParkingLocation.AdmArea)
+                    totalNumberOfParkingSpaces++;
+
+            return totalNumberOfParkingSpaces;
+        }
     }
 
-   
+
 }

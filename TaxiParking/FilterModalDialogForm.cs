@@ -27,6 +27,9 @@ namespace TaxiParking
 
             carCapacityMinTextField.Text = filter.MinCarCapacity.ToString();
             carCapacityMaxTextField.Text = filter.MaxCarCapacity.ToString();
+
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(okButton, "Применить изменения");
         }
 
         /// <summary>

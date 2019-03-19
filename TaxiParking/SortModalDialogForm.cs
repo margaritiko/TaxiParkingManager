@@ -24,6 +24,8 @@ namespace TaxiParking
         public SortModalDialogForm()
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(okButton, "Применить изменения");
         }
 
         /// <summary>
@@ -33,6 +35,8 @@ namespace TaxiParking
         public SortModalDialogForm(SortType sortType)
         {
             InitializeComponent();
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(okButton, "Применить изменения");
             switch (sortType)
             {
                 case SortType.defaultSort:

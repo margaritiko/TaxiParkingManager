@@ -58,10 +58,10 @@
             this.numberOfParkingsSortButton.AutoSize = true;
             this.numberOfParkingsSortButton.Location = new System.Drawing.Point(7, 151);
             this.numberOfParkingsSortButton.Name = "numberOfParkingsSortButton";
-            this.numberOfParkingsSortButton.Size = new System.Drawing.Size(649, 35);
+            this.numberOfParkingsSortButton.Size = new System.Drawing.Size(833, 35);
             this.numberOfParkingsSortButton.TabIndex = 3;
             this.numberOfParkingsSortButton.TabStop = true;
-            this.numberOfParkingsSortButton.Text = "по количеству парковок в выбранном округе";
+            this.numberOfParkingsSortButton.Text = "по возрастанию количества парковок в выбранном округе";
             this.numberOfParkingsSortButton.UseVisualStyleBackColor = true;
             this.numberOfParkingsSortButton.CheckedChanged += new System.EventHandler(this.SortButton_CheckedChanged);
             // 
@@ -109,9 +109,9 @@
             this.okButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.okButton.Location = new System.Drawing.Point(319, 286);
+            this.okButton.Location = new System.Drawing.Point(351, 280);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(340, 131);
+            this.okButton.Size = new System.Drawing.Size(251, 183);
             this.okButton.TabIndex = 7;
             this.okButton.UseVisualStyleBackColor = false;
             this.okButton.Click += new System.EventHandler(this.OkButton_Click);
@@ -121,12 +121,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(974, 429);
+            this.ClientSize = new System.Drawing.Size(974, 479);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.groupBoxForSortingButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1000, 500);
-            this.MinimumSize = new System.Drawing.Size(1000, 500);
+            this.MaximumSize = new System.Drawing.Size(1000, 550);
+            this.MinimumSize = new System.Drawing.Size(1000, 550);
             this.Name = "SortModalDialogForm";
             this.Text = "Сортировка";
             this.groupBoxForSortingButton.ResumeLayout(false);

@@ -34,21 +34,24 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeCurrentFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDataToFIleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.byToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carCapacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.globalidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byNumberOfParkingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byFieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byFieldCarCapacityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonsTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.sortButton = new System.Windows.Forms.Button();
             this.filterButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -56,13 +59,11 @@
             this.createButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.какНовыйФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.перезаписатьСуществующийФайлToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.buttonsTableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -79,6 +80,7 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(1574, 990);
             this.tableLayoutPanel.TabIndex = 0;
             // 
@@ -90,7 +92,8 @@
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.sortToolStripMenuItem,
-            this.filterToolStripMenuItem});
+            this.filterToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1574, 40);
@@ -103,25 +106,46 @@
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(83, 36);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(83, 38);
             this.fileToolStripMenuItem.Text = "Файл";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(230, 38);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.openToolStripMenuItem.Text = "Открыть";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.какНовыйФайлToolStripMenuItem,
-            this.перезаписатьСуществующийФайлToolStripMenuItem1,
-            this.добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1});
+            this.saveAsNewFileToolStripMenuItem,
+            this.changeCurrentFileToolStripMenuItem1,
+            this.addDataToFIleToolStripMenuItem1});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
             this.saveToolStripMenuItem.Text = "Сохранить";
+            // 
+            // saveAsNewFileToolStripMenuItem
+            // 
+            this.saveAsNewFileToolStripMenuItem.Name = "saveAsNewFileToolStripMenuItem";
+            this.saveAsNewFileToolStripMenuItem.Size = new System.Drawing.Size(670, 38);
+            this.saveAsNewFileToolStripMenuItem.Text = "Как новый файл";
+            this.saveAsNewFileToolStripMenuItem.Click += new System.EventHandler(this.SaveAsNewFileToolStripMenuItem_Click);
+            // 
+            // changeCurrentFileToolStripMenuItem1
+            // 
+            this.changeCurrentFileToolStripMenuItem1.Name = "changeCurrentFileToolStripMenuItem1";
+            this.changeCurrentFileToolStripMenuItem1.Size = new System.Drawing.Size(670, 38);
+            this.changeCurrentFileToolStripMenuItem1.Text = "Перезаписать существующий файл";
+            this.changeCurrentFileToolStripMenuItem1.Click += new System.EventHandler(this.ChangeCurrentFileToolStripMenuItem1_Click);
+            // 
+            // addDataToFIleToolStripMenuItem1
+            // 
+            this.addDataToFIleToolStripMenuItem1.Name = "addDataToFIleToolStripMenuItem1";
+            this.addDataToFIleToolStripMenuItem1.Size = new System.Drawing.Size(670, 38);
+            this.addDataToFIleToolStripMenuItem1.Text = "Добавить текущие данные в существующий файл";
+            this.addDataToFIleToolStripMenuItem1.Click += new System.EventHandler(this.AddDataToFileToolStripMenuItem1_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -157,21 +181,21 @@
             // sortToolStripMenuItem
             // 
             this.sortToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.поToolStripMenuItem,
+            this.byToolStripMenuItem,
             this.byNumberOfParkingsToolStripMenuItem,
             this.defaultOrderToolStripMenuItem});
             this.sortToolStripMenuItem.Name = "sortToolStripMenuItem";
             this.sortToolStripMenuItem.Size = new System.Drawing.Size(193, 38);
             this.sortToolStripMenuItem.Text = "Отсортировать";
             // 
-            // поToolStripMenuItem
+            // byToolStripMenuItem
             // 
-            this.поToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.byToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.carCapacityToolStripMenuItem,
             this.globalidToolStripMenuItem});
-            this.поToolStripMenuItem.Name = "поToolStripMenuItem";
-            this.поToolStripMenuItem.Size = new System.Drawing.Size(588, 38);
-            this.поToolStripMenuItem.Text = "По полю";
+            this.byToolStripMenuItem.Name = "byToolStripMenuItem";
+            this.byToolStripMenuItem.Size = new System.Drawing.Size(588, 38);
+            this.byToolStripMenuItem.Text = "По полю";
             // 
             // carCapacityToolStripMenuItem
             // 
@@ -203,24 +227,17 @@
             // 
             // filterToolStripMenuItem
             // 
-            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.byFieldToolStripMenuItem,
-            this.byFieldCarCapacityToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(195, 38);
             this.filterToolStripMenuItem.Text = "Отфильтровать";
+            this.filterToolStripMenuItem.Click += new System.EventHandler(this.FilterButton_Click);
             // 
-            // byFieldToolStripMenuItem
+            // aboutToolStripMenuItem
             // 
-            this.byFieldToolStripMenuItem.Name = "byFieldToolStripMenuItem";
-            this.byFieldToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
-            this.byFieldToolStripMenuItem.Text = "По полю AdmArea";
-            // 
-            // byFieldCarCapacityToolStripMenuItem
-            // 
-            this.byFieldCarCapacityToolStripMenuItem.Name = "byFieldCarCapacityToolStripMenuItem";
-            this.byFieldCarCapacityToolStripMenuItem.Size = new System.Drawing.Size(345, 38);
-            this.byFieldCarCapacityToolStripMenuItem.Text = "По полю CarCapacity";
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 38);
+            this.aboutToolStripMenuItem.Text = "Справка";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // dataGridView
             // 
@@ -247,6 +264,7 @@
             this.buttonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.buttonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.buttonsTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.buttonsTableLayoutPanel.Controls.Add(this.numericUpDown, 5, 0);
             this.buttonsTableLayoutPanel.Controls.Add(this.sortButton, 4, 0);
             this.buttonsTableLayoutPanel.Controls.Add(this.filterButton, 3, 0);
             this.buttonsTableLayoutPanel.Controls.Add(this.deleteButton, 2, 0);
@@ -259,6 +277,32 @@
             this.buttonsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.buttonsTableLayoutPanel.Size = new System.Drawing.Size(1568, 94);
             this.buttonsTableLayoutPanel.TabIndex = 3;
+            // 
+            // numericUpDown
+            // 
+            this.numericUpDown.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.numericUpDown.Location = new System.Drawing.Point(1385, 3);
+            this.numericUpDown.Maximum = new decimal(new int[] {
+            354,
+            0,
+            0,
+            0});
+            this.numericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown.Name = "numericUpDown";
+            this.numericUpDown.Size = new System.Drawing.Size(180, 86);
+            this.numericUpDown.TabIndex = 6;
+            this.numericUpDown.Value = new decimal(new int[] {
+            354,
+            0,
+            0,
+            0});
+            this.numericUpDown.ValueChanged += new System.EventHandler(this.NumericUpDown_ValueChanged);
             // 
             // sortButton
             // 
@@ -345,24 +389,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // какНовыйФайлToolStripMenuItem
-            // 
-            this.какНовыйФайлToolStripMenuItem.Name = "какНовыйФайлToolStripMenuItem";
-            this.какНовыйФайлToolStripMenuItem.Size = new System.Drawing.Size(670, 38);
-            this.какНовыйФайлToolStripMenuItem.Text = "Как новый файл";
-            // 
-            // перезаписатьСуществующийФайлToolStripMenuItem1
-            // 
-            this.перезаписатьСуществующийФайлToolStripMenuItem1.Name = "перезаписатьСуществующийФайлToolStripMenuItem1";
-            this.перезаписатьСуществующийФайлToolStripMenuItem1.Size = new System.Drawing.Size(670, 38);
-            this.перезаписатьСуществующийФайлToolStripMenuItem1.Text = "Перезаписать существующий файл";
-            // 
-            // добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1
-            // 
-            this.добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1.Name = "добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1";
-            this.добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1.Size = new System.Drawing.Size(670, 38);
-            this.добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1.Text = "Добавить текущие данные в существующий файл";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -379,6 +405,7 @@
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.buttonsTableLayoutPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -395,13 +422,11 @@
         private System.Windows.Forms.ToolStripMenuItem editNoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sortToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem byToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carCapacityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem globalidToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byNumberOfParkingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem byFieldToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem byFieldCarCapacityToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.DataGridView dataGridView;
@@ -412,9 +437,11 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.ToolStripMenuItem defaultOrderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem какНовыйФайлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem перезаписатьСуществующийФайлToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem добавитьТекущиеДанныеВСуществующийФайлToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem saveAsNewFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeCurrentFileToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addDataToFIleToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.NumericUpDown numericUpDown;
     }
 }
 

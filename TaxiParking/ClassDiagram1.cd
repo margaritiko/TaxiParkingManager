@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TaxiParking.FilterModalDialogForm">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAEBCEAAACAAACgAAACAAAAEAoAAAAAAAAAJCE=</HashCode>
+      <FileName>FilterModalDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiParking.Form1">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DMCAABMgQiAAhFYAIUCC8AAWAIAyhIIASmAgkgCBIAE=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiParking.ModalDialogForm">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAgARGUAgAAQACCAcAACHIAEGBIACAAAACAAACA=</HashCode>
+      <FileName>ModalDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiParking.SortModalDialogForm">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAiAAAAAQAACAAAACBAAAEAIQAAAAAkAAAAA=</HashCode>
+      <FileName>SortModalDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TaxiParkingLibrary.FIlter">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="TaxiParkingLibrary.Location">
+    <Position X="4.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="TaxiParkingLibrary.TaxiParkingException">
+    <Position X="4.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="TaxiParkingLibrary.SortType">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -14,7 +14,7 @@ namespace TaxiParking
     public partial class ModalDialogForm : Form
     {
         HashSet<int> IDs = new HashSet<int>();
-
+        int idToCompare = -100;
         /// <summary>
         /// Список со строками, которые используются при закрытии формы для создания нового объекта типа Parking
         /// </summary>
@@ -35,10 +35,13 @@ namespace TaxiParking
         /// <summary>
         /// Создает пустую форму (используется при нажатии пользователем кнопки создания записи)
         /// </summary>
-        public ModalDialogForm(HashSet<int> ids)
+        public ModalDialogForm(HashSet<int> ids, int _id = -100)
         {
             InitializeComponent();
             IDs = ids;
+            idToCompare = _id;
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(okButton, "Применить изменения");
         }
    
         private void OkButton_Click(object sender, EventArgs e)
@@ -61,7 +64,10 @@ namespace TaxiParking
             try
             {
                 _Parking = new Parking(Data);
-                if (IDs.Contains(_Parking.Global_id))
+                Console.WriteLine("ID");
+                Console.WriteLine(_Parking.Global_id);
+                Console.WriteLine(idToCompare);
+                if (_Parking.Global_id != idToCompare && IDs.Contains(_Parking.Global_id))
                     throw new TaxiParkingException("Запись с данным global_id уже существует, " +
                         " введите другое значения для global_id и попробуйте снова");
 

@@ -8,10 +8,15 @@ namespace TaxiParkingLibrary
 {
     public class Location
     {
-        public string AdmArea { get; set; }
-        public string District { get; set; }
-        public double Longitude_WGS84 { get; set; }
-        public double Latitude_WGS84 { get; set; }
+        private string _admArea;
+        private string _district;
+        private double _longitude_WGS84;
+        private double _latitude_WGS84;
+
+        public string AdmArea { get => _admArea; set => _admArea = value; }
+        public string District { get => _district; set => _district = value; }
+        public double Longitude_WGS84 { get => _longitude_WGS84; set => _longitude_WGS84 = value; }
+        public double Latitude_WGS84 { get => _latitude_WGS84; set => _latitude_WGS84 = value; }
 
 
         public Location(string admArea, string district, string longitude, string latitude)

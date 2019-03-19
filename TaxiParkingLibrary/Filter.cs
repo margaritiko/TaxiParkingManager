@@ -9,9 +9,15 @@ namespace TaxiParkingLibrary
     public class FIlter
     {
         public string AdmAreaValue { get; set; } = "";
-    
         public uint MinCarCapacity { get; set; } = 0;
         public uint MaxCarCapacity { get; set; } = uint.MaxValue;
+
+        public void Init()
+        {
+            AdmAreaValue = "";
+            MinCarCapacity = 0;
+            MaxCarCapacity = uint.MaxValue;
+        }
     }
 
 }
